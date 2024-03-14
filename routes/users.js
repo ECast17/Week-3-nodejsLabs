@@ -46,7 +46,7 @@ router.get("/:email",(req,res)=>{
 
 // POST request: Create a new user, the C in CRUD = create
 router.post("/",(req,res)=>{
-  users.push({"firstName":req.query.firstName,"lastName":req.query.lastName,"email":req.query.email,"DOB":req.query.DOB)};
+  users.push({"firstName":req.query.firstName,"lastName":req.query.lastName,"email":req.query.email,"DOB":req.query.DOB});
   res.send("The user" + (' ')+ (req.query.firstName) + " Has been added!")
 });
 
