@@ -31,8 +31,10 @@ router.get("/",(req,res)=>{
 
 // GET by specific ID request: Retrieve a single user with email ID
 router.get("/:email",(req,res)=>{
-  // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  // adding code from exercise 3
+    const email = req.params.email;
+    let filtered_users = users.filter((user) => user.email === email);
+  res.send(filtered_users);
 });
 
 
