@@ -32,7 +32,7 @@ let users = [
 // GET request: Retrieve all users
 router.get("/",(req,res)=>{
   // The R in CRUD
-  res.send(users);
+  res.send(JSON.stringify({users},null,4));
 });
 
 // GET by specific ID request: Retrieve a single user with email ID
