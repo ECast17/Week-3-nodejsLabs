@@ -25,8 +25,8 @@ let users = [
 
 // GET request: Retrieve all users
 router.get("/",(req,res)=>{
-  // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  // The R in CRUD
+  res.send(users);
 });
 
 // GET by specific ID request: Retrieve a single user with email ID
