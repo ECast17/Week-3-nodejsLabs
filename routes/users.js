@@ -56,21 +56,21 @@ router.put("/:email", (req, res) => {
     const email = req.params.email;
     let filtered_users = users.filter((user) => user.email === email);
     if (filtered_users.length > 0) {
-        let filtered_users = filtered_users[0];
+        let filtered_user = filtered_users[0];
         let DOB = req.query.DOB;
         let firstName = req.query.firstName;
         let lastName = req.query.lastName;
         if (DOB) {
-            filtered_users.DOB = DOB
+            filtered_user.DOB = DOB
         }
         if (firstName) {
-            filtered_users.firstName = firstName
+            filtered_user.firstName = firstName
         }
         if (lastName) {
-            filtered_users.lastName = lastName
+            filtered_user.lastName = lastName
         }
-        users = users.filter((users) => user.email != email);
-        users.push(filtered_users);
+        users = users.filter((user) => user.email != email);
+        users.push(filtered_user);
   res.send('User with the email ${email} updated.');
     }
     else{
